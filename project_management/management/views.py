@@ -1,5 +1,3 @@
-from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
 from .models import Client, Project
 from rest_framework.decorators import api_view,permission_classes
 from django.http import JsonResponse, HttpResponse
@@ -10,7 +8,6 @@ from rest_framework import status
 from django.shortcuts import get_object_or_404
 from django.core.exceptions import PermissionDenied
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.permissions import AllowAny
 from django.contrib.auth import authenticate
